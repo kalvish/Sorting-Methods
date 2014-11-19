@@ -15,7 +15,7 @@ public class Problem1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//Double[] heights = {5.45,3.56,6.45,2.45,6.34,1.45};
-		Double[] heights = new Double[10];
+		Double[] heights = new Double[1000];
 		LinkedList<Double> heightsLinkedList = new LinkedList<>();
 		
 		for (int i = 0; i < heights.length; i++) {
@@ -29,12 +29,14 @@ public class Problem1 {
 		
 		SelectionSort selectionSort = new SelectionSort();
 		Double[] selectionSortedArray = selectionSort.sort(heights);
-		//System.out.println(Arrays.toString(selectionSortedArray));
+		System.out.println(Arrays.toString(selectionSortedArray));
 		
 		InsertionSort insertionSort = new InsertionSort();
-		Double[] sortedDoubles = insertionSort.sort(heights);
+		Comparable [] sortedDoubles = insertionSort.sort(heights);
+		System.out.println(Arrays.toString(sortedDoubles));
+		
 		LinkedList<Double> sortedLS = insertionSort.sort(heightsLinkedList);
-		//System.out.println(Arrays.toString(sortedDoubles));
+		
 		//System.out.println(sortedLS.toString());
 	}
 
