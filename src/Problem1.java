@@ -24,8 +24,8 @@ public class Problem1 {
 		}
 		
 		BubbleSort bubbleSort = new BubbleSort();
-		Double[] sortedArray = bubbleSort.sort(heights);
-		//System.out.println(Arrays.toString(sortedArray));
+		Comparable [] sortedArray = bubbleSort.sort(heights);
+		System.out.println(Arrays.toString(sortedArray));
 		
 		SelectionSort selectionSort = new SelectionSort();
 		Double[] selectionSortedArray = selectionSort.sort(heights);

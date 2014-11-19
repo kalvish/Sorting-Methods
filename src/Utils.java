@@ -11,6 +11,11 @@ public class Utils {
 		a[j] = t;
 	}*/
 	
+	// is v < w ?
+	public static <T> boolean less(Comparable v, Comparable w) {
+        return (v.compareTo(w) < 0);
+    }
+	
 	public static final <T> void swap(T[] a, int i, int j) {
 		T t = a[i];
 		a[i] = a[j];
@@ -30,4 +35,6 @@ public class Utils {
 		swap(l, 0, 1);
 		System.out.println("l:" + l);
 	}*/
+	
+
 }

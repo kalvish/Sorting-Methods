@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-	public Double[] sort(Double[] heights) {
+	public Comparable [] sort(Comparable [] heights) {
 		// TODO Auto-generated method stub
-		Double[] heightsEdit = Arrays.copyOf(heights, heights.length);
+		Comparable [] heightsEdit = Arrays.copyOf(heights, heights.length);
 
 		long startTime = System.nanoTime();
 		// ... the code being measured ...
@@ -21,7 +21,8 @@ public class BubbleSort {
 			//System.out.println("\n" + "decrement--------");
 			for (int i = 0; i < k; i++) {
 				//System.out.println("\n" + "increment");
-				if (heightsEdit[i] > heightsEdit[i + 1]) {
+			//	System.out.println("\n" + heightsEdit[i+1]+ " " + heightsEdit[i]);
+				if (Utils.less(heightsEdit[i+1], heightsEdit[i])) {
 					Utils.swap(heightsEdit, i, i + 1);
 					//System.out.println("\n" + "swap");
 				}
