@@ -28,7 +28,7 @@ public class Problem1 {
 		System.out.println(Arrays.toString(sortedArray));
 		
 		SelectionSort selectionSort = new SelectionSort();
-		Double[] selectionSortedArray = selectionSort.sort(heights);
+		Comparable [] selectionSortedArray = selectionSort.sort(heights);
 		System.out.println(Arrays.toString(selectionSortedArray));
 		
 		InsertionSort insertionSort = new InsertionSort();

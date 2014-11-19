@@ -46,13 +46,17 @@ public class Problem1_Txt {
 //			e.printStackTrace();
 //		}
 		
-		//BubbleSort bubbleSort = new BubbleSort();
-		//Comparable<String> [] sortedArray =  bubbleSort.sort(rooms);
-		//System.out.println(Arrays.toString(sortedArray));
+		BubbleSort bubbleSort = new BubbleSort();
+		Comparable<String> [] sortedArray =  bubbleSort.sort(rooms);
+		System.out.println(Arrays.toString(sortedArray));
 		
 		InsertionSort insertionSort = new InsertionSort();
 		Comparable [] sortedDoubles = insertionSort.sort(rooms);
 		System.out.println(Arrays.toString(sortedDoubles));
+		
+		SelectionSort selectionSort = new SelectionSort();
+		Comparable [] selectionSortedArray = selectionSort.sort(rooms);
+		System.out.println(Arrays.toString(selectionSortedArray));
 	}
 
 }

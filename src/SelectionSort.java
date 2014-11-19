@@ -3,9 +3,9 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-	public Double[] sort(Double[] heights) {
+	public Comparable [] sort(Comparable [] heights) {
 		// TODO Auto-generated method stub
-		Double[] heightsEdit = Arrays.copyOf(heights, heights.length);
+		Comparable [] heightsEdit = Arrays.copyOf(heights, heights.length);
 		
 		long startTime = System.nanoTime();
 		// ... the code being measured ...
@@ -15,7 +15,7 @@ public class SelectionSort {
 			int shortesGuyIndex = k;
 			for (int i = k; i < heightsEdit.length-1; i++) {
 				//System.out.println("\n" + "increment");
-				if (heightsEdit[shortesGuyIndex] > heightsEdit[i + 1]) {
+				if (Utils.less(heightsEdit[i + 1], heightsEdit[shortesGuyIndex])/*heightsEdit[shortesGuyIndex] > heightsEdit[i + 1]*/) {
 					shortesGuyIndex = i+1;
 					//System.out.println("\n" + "swap");
 				}
