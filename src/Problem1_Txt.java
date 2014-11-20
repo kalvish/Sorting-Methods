@@ -50,6 +50,13 @@ public class Problem1_Txt {
 		Comparable<String> [] sortedArray =  bubbleSort.sort(rooms);
 		System.out.println(Arrays.toString(sortedArray));
 		
+		InsertionSort insertionSort = new InsertionSort();
+		Comparable [] sortedDoubles = insertionSort.sort(rooms);
+		System.out.println(Arrays.toString(sortedDoubles));
+		
+		SelectionSort selectionSort = new SelectionSort();
+		Comparable [] selectionSortedArray = selectionSort.sort(rooms);
+		System.out.println(Arrays.toString(selectionSortedArray));
 	}
 
 }

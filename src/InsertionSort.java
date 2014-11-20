@@ -3,21 +3,21 @@ import java.util.LinkedList;
 
 public class InsertionSort {
 
-	public Double[] sort(Double[] heights) {
+	public Comparable [] sort(Comparable [] heights) {
 		// TODO Auto-generated method stub
-		Double[] heightsEdit = Arrays.copyOf(heights, heights.length);
+		Comparable [] heightsEdit = Arrays.copyOf(heights, heights.length);
 
 		long startTime = System.nanoTime();
 		// ... the code being measured ...
 
-		Double[] sortedArray;
+		Comparable [] sortedArray;
 		int marker = 1;
 
 		for (int i = 0; i < heightsEdit.length-1; i++) {
 			int currentComparedGuy = marker-1;
-			double temp = heightsEdit[marker];
-			while ((currentComparedGuy >= 0) && (temp < heightsEdit[currentComparedGuy])
-					 ) {
+			Comparable temp = heightsEdit[marker];
+			while ((currentComparedGuy >= 0) && Utils.less(temp, heightsEdit[currentComparedGuy]))
+			{
 				heightsEdit[currentComparedGuy+1] = heightsEdit[currentComparedGuy];
 				currentComparedGuy--;				
 			}
